@@ -15,13 +15,13 @@ import reactor.core.publisher.Flux;
 @RequiredArgsConstructor
 @Data
 public class PoliteServer {
-    private final KitchenService kitchen;
+    private final KitchenService1 kitchen;
 
-    Flux<Dish> doingMyJob(){
+    Flux<Dish1> doingMyJob(){
         return kitchen.getDishes()
                 .doOnNext(dish -> System.out.println("Thank you for"+dish+"!"))
                 .doOnError(error-> System.out.println("So sorry about"+error.getMessage()))
                 .doOnComplete(()-> System.out.println("Tanks for all your hard work!"))
-                .map(Dish::deliver);
+                .map(Dish1::deliver);
     }
 }

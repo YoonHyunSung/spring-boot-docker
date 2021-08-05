@@ -8,13 +8,13 @@ import reactor.core.publisher.Flux;
  * just()를 통해 비동기적으로 제공한다
  */
 
-public class KitchenService {
+public class KitchenService1 {
 
-    Flux<Dish> getDishes(){
+    Flux<Dish1> getDishes(){
         return Flux.just(
-                new Dish("Sesame chicken"), //
-                new Dish("Lo mein noodles, plain"), //
-                new Dish("Sweet & sour beef"));
+                new Dish1("Sesame chicken"), //
+                new Dish1("Lo mein noodles, plain"), //
+                new Dish1("Sweet & sour beef"));
 
     }
 }
