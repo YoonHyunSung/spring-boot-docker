@@ -2,11 +2,10 @@ package SBoot.SpringDocker.item.entity;
 
 import lombok.Data;
 
-import javax.persistence.Id;
 
 @Data
 public class Item {
-    private  @Id String id;
+    private String id;
     private String name;
     private  double price;
 
