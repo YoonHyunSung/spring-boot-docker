@@ -37,7 +37,8 @@ public class MyFriends {
     }
 
 }
-@Data class CompFriend extends Friend{
+//class 에서의 final은 상속을 받지않는다.
+@Data final class CompFriend extends Friend{
     private String department;
     public CompFriend(String name, String department, String phone){
         super(name, phone);
